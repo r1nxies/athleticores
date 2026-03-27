@@ -3,7 +3,7 @@ from datetime import date
 
 from django.db.models import Count
 
-from .models import Athlete, TrendEntry
+from .models import Athlete, Coach, TrendEntry
 
 
 STATUS_STYLES = {
@@ -14,13 +14,14 @@ STATUS_STYLES = {
 
 
 def _build_status_counts(athletes):
-    counter = Counter(entry["status"] for entry in athletes.values_list("status", flat=True))
+    counter = Counter(athletes.values_list("status", flat=True))
     total = athletes.count()
     return {status: counter.get(status, 0) for status in STATUS_STYLES.keys()}, total
 
 
 def get_dashboard_payload():
     athletes = Athlete.objects.all()
+    coaches = Coach.objects.all()
     status_counts, total = _build_status_counts(athletes)
 
     overview = [
@@ -43,15 +44,33 @@ def get_dashboard_payload():
         .order_by("sport")
     )
 
+    coach_totals = (
+        coaches.values("sport")
+        .annotate(count=Count("id"))
+        .order_by("sport")
+    )
+
     athlete_rows = [
         {
             "name": athlete.name,
             "sport": athlete.sport,
             "class": athlete.class_level,
+            "coach": athlete.coach.name if athlete.coach else "Unassigned",
             "fitness_score": athlete.fitness_score,
             "status": STATUS_STYLES.get(athlete.status, {"label": athlete.status, "color": "#888"}),
         }
         for athlete in athletes
+    ]
+
+    coach_rows = [
+        {
+            "name": coach.name,
+            "sport": coach.sport,
+            "email": coach.email,
+            "years_experience": coach.years_experience,
+            "athlete_count": coach.athletes.count(),
+        }
+        for coach in coaches
     ]
 
     # Safeguard against division by zero when computing averages
@@ -64,6 +83,8 @@ def get_dashboard_payload():
         "overview": overview,
         "trend_graph": trend_graph,
         "sport_totals": list(sport_totals),
+        "coach_totals": list(coach_totals),
         "athletes": athlete_rows,
+        "coaches": coach_rows,
         "generated": date.today().isoformat(),
     }

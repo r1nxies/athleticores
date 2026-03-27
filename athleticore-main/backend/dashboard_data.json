@@ -1,0 +1,173 @@
+[
+{
+  "model": "dashboard.coach",
+  "pk": 1,
+  "fields": {
+    "name": "Jordan Hayes",
+    "sport": "Basketball",
+    "email": "jordan.hayes@athleticore.local",
+    "years_experience": 11,
+    "created_at": "2026-03-27T14:09:58.227Z"
+  }
+},
+{
+  "model": "dashboard.coach",
+  "pk": 2,
+  "fields": {
+    "name": "Maya Brooks",
+    "sport": "Soccer",
+    "email": "maya.brooks@athleticore.local",
+    "years_experience": 9,
+    "created_at": "2026-03-27T14:09:58.236Z"
+  }
+},
+{
+  "model": "dashboard.coach",
+  "pk": 3,
+  "fields": {
+    "name": "Chris Bennett",
+    "sport": "Track & Field",
+    "email": "chris.bennett@athleticore.local",
+    "years_experience": 13,
+    "created_at": "2026-03-27T14:09:58.246Z"
+  }
+},
+{
+  "model": "dashboard.coach",
+  "pk": 4,
+  "fields": {
+    "name": "Leah Morgan",
+    "sport": "Volleyball",
+    "email": "leah.morgan@athleticore.local",
+    "years_experience": 8,
+    "created_at": "2026-03-27T14:09:58.256Z"
+  }
+},
+{
+  "model": "dashboard.coach",
+  "pk": 5,
+  "fields": {
+    "name": "Aaron Patel",
+    "sport": "Swimming",
+    "email": "aaron.patel@athleticore.local",
+    "years_experience": 10,
+    "created_at": "2026-03-27T14:09:58.266Z"
+  }
+},
+{
+  "model": "dashboard.coach",
+  "pk": 6,
+  "fields": {
+    "name": "Nina Foster",
+    "sport": "Tennis",
+    "email": "nina.foster@athleticore.local",
+    "years_experience": 7,
+    "created_at": "2026-03-27T14:09:58.276Z"
+  }
+},
+{
+  "model": "dashboard.athlete",
+  "pk": 1,
+  "fields": {
+    "name": "Marcus Johnson",
+    "sport": "Basketball",
+    "class_level": "Junior",
+    "coach": 1,
+    "fitness_score": 92,
+    "status": "Cleared",
+    "updated_at": "2026-03-27T14:09:58.297Z"
+  }
+},
+{
+  "model": "dashboard.athlete",
+  "pk": 2,
+  "fields": {
+    "name": "Sarah Williams",
+    "sport": "Soccer",
+    "class_level": "Senior",
+    "coach": 2,
+    "fitness_score": 88,
+    "status": "Cleared",
+    "updated_at": "2026-03-27T14:09:58.306Z"
+  }
+},
+{
+  "model": "dashboard.athlete",
+  "pk": 3,
+  "fields": {
+    "name": "James Chen",
+    "sport": "Track & Field",
+    "class_level": "Sophomore",
+    "coach": 3,
+    "fitness_score": 78,
+    "status": "Pending",
+    "updated_at": "2026-03-27T14:09:58.316Z"
+  }
+},
+{
+  "model": "dashboard.athlete",
+  "pk": 4,
+  "fields": {
+    "name": "Emily Rodriguez",
+    "sport": "Volleyball",
+    "class_level": "Junior",
+    "coach": 4,
+    "fitness_score": 86,
+    "status": "Cleared",
+    "updated_at": "2026-03-27T14:09:58.325Z"
+  }
+},
+{
+  "model": "dashboard.athlete",
+  "pk": 5,
+  "fields": {
+    "name": "Tyler Brown",
+    "sport": "Swimming",
+    "class_level": "Freshman",
+    "coach": 5,
+    "fitness_score": 72,
+    "status": "Restricted",
+    "updated_at": "2026-03-27T14:09:58.333Z"
+  }
+},
+{
+  "model": "dashboard.athlete",
+  "pk": 6,
+  "fields": {
+    "name": "Olivia Martinez",
+    "sport": "Tennis",
+    "class_level": "Senior",
+    "coach": 6,
+    "fitness_score": 90,
+    "status": "Cleared",
+    "updated_at": "2026-03-27T14:09:58.341Z"
+  }
+},
+{
+  "model": "dashboard.trendentry",
+  "pk": 1,
+  "fields": {
+    "month": "Jan",
+    "average_fitness": 76,
+    "created_at": "2026-03-27T14:09:58.286Z"
+  }
+},
+{
+  "model": "dashboard.trendentry",
+  "pk": 2,
+  "fields": {
+    "month": "Feb",
+    "average_fitness": 78,
+    "created_at": "2026-03-27T14:09:58.286Z"
+  }
+},
+{
+  "model": "dashboard.trendentry",
+  "pk": 3,
+  "fields": {
+    "month": "Mar",
+    "average_fitness": 80,
+    "created_at": "2026-03-27T14:09:58.286Z"
+  }
+}
+]
