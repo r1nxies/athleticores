@@ -492,6 +492,260 @@ body {
   border-color: rgba(122, 167, 255, 0.5);
 }
 
+.athletes-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.athlete-add-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.athlete-add-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.athlete-add-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.form-status-inline {
+  margin: 0;
+}
+
+.athlete-controls {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.athlete-search,
+.athlete-select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #eef5ff;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+}
+
+.athlete-select option {
+  background: #0b1630;
+}
+
+.athletes-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.athlete-card-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.athlete-card {
+  background: rgba(12, 19, 37, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.athlete-card-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.6rem 1rem;
+  align-items: center;
+}
+
+.athlete-card-grid span {
+  color: #98a8cc;
+}
+
+.athlete-card-grid strong {
+  justify-self: end;
+}
+
+.assessments-page {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(320px, 1fr);
+  gap: 1rem;
+}
+
+.assessments-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.assessment-label {
+  color: #c9d6f4;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.assessment-select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #eef5ff;
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+}
+
+.assessment-select option {
+  background: #0b1630;
+}
+
+.assessment-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0.2rem 0;
+}
+
+.assessment-section-title {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.assessment-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.metric-slider-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.metric-slider-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric-slider-top span {
+  color: #d1dcf6;
+}
+
+.metric-slider-row input[type="range"] {
+  width: 100%;
+}
+
+.assessment-generate-button {
+  width: 100%;
+  margin-top: 0.4rem;
+}
+
+.assessment-empty {
+  min-height: 170px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #97a8cc;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+}
+
+.assessment-result-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 0.95rem;
+}
+
+.assessment-athlete-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+}
+
+.assessment-summary-line {
+  margin: 0.28rem 0;
+  color: #a9b9db;
+}
+
+.assessment-grade {
+  margin: 0.8rem 0 0.3rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.assessment-reason {
+  margin: 0;
+  color: #c8d5f1;
+}
+
+.assessment-criteria-list {
+  gap: 0.7rem;
+}
+
+.criteria-card {
+  border-radius: 14px;
+  padding: 0.85rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border: 1px solid transparent;
+}
+
+.criteria-card span {
+  color: #b0bfde;
+  font-size: 0.92rem;
+}
+
+.criteria-elite {
+  background: rgba(16, 185, 129, 0.16);
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.criteria-elite strong {
+  color: #10c981;
+}
+
+.criteria-advanced {
+  background: rgba(79, 141, 255, 0.16);
+  border-color: rgba(79, 141, 255, 0.25);
+}
+
+.criteria-advanced strong {
+  color: #4f8dff;
+}
+
+.criteria-intermediate {
+  background: rgba(242, 201, 76, 0.15);
+  border-color: rgba(242, 201, 76, 0.25);
+}
+
+.criteria-intermediate strong {
+  color: #f2c94c;
+}
+
+.criteria-not-eligible {
+  background: rgba(239, 92, 120, 0.15);
+  border-color: rgba(239, 92, 120, 0.25);
+}
+
+.criteria-not-eligible strong {
+  color: #ef5c78;
+}
+
 @media (max-width: 860px) {
   .hero {
     flex-direction: column;
@@ -507,6 +761,10 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .assessments-page {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 560px) {
@@ -517,6 +775,19 @@ body {
 
   .nav-links {
     flex-wrap: wrap;
+  }
+
+  .athlete-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .athletes-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .athlete-add-grid {
+    grid-template-columns: 1fr;
   }
 
   .panels {
